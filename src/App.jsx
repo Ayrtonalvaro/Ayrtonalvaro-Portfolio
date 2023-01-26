@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <div className="App bg-gradient-to-r from-black to-slate-900 w-full h-screen">
+      <div className="App bg-gradient-to-r from-black to-slate-900 w-full h-full">
         <Portfolio />
       </div>
     </>

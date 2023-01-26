@@ -1,0 +1,91 @@
+{
+  "user": [
+    {
+      "name": "Ayrton Alvaro...",
+      "profession": "Web developer",
+      "mail": "Ayrtonalvaro1973@gmail.com",
+      "description": "Bienvenidos a mi porfolio, soy un programador jr front end con algunos conocimientos sobre el back end, siempre estoy intentando aprender y descubrir nuevas tecnologias para implemnetar a los proyectos que realizo.Soy de Argentina de la provincia de Buenos Aires tengo 26 años te invito a saber mas de mi en las siguientes secciones.En mis tiempos libres soy guitarrista😁",
+      "linkSocial": {
+        "gitHub": "https://github.com/Ayrtonalvaro",
+        "linkedIn": "https://www.linkedin.com/in/ayrton-alvaro-320a9424a/",
+        "instagram": "https://www.instagram.com/ayrtonalvaro/?hl=es-la",
+        "twitter": "https://twitter.com/ayrtonalvaro"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "language": "html"
+    },
+    {
+      "language": "Css"
+    },
+    {
+      "language": "JavaScript"
+    },
+    {
+      "language": "TypeScript"
+    },
+    {
+      "language": "java"
+    }
+  ],
+  "framewokrs": [
+    { "nameFramework": "React" },
+    { "nameFramework": "Angular" },
+    { "nameFramework": "Spring Boot" },
+    { "nameFramework": "Tailwindcss" },
+    { "nameFramework": "Bootstrap" }
+  ],
+  "projects": [
+    {
+      "nameProject": "Divi Films",
+      "imagesProject": {
+        "img1": "../assets/Projects/Divifilms/img1-diviFilms.jpg",
+        "img2": "../assets/Projects/Divifilms/img2-diviFilms.jpg",
+        "img3": "../assets/Projects/Divifilms/img3-diviFilms.jpg",
+        "img4": "../assets/Projects/Divifilms/img4-diviFilms.jpg"
+      }
+    },
+    {
+      "nameProject": "Space tourism",
+      "imagesProject": {
+        "img1": "../assets/Projects/Space tourims/img1.jpg",
+        "img2": "../assets/Projects/Space tourims/img2.jpg",
+        "img3": "../assets/Projects/Space tourims/img3.jpg"
+      }
+    },
+    {
+      "nameProject": "E-shop",
+      "imagesProject": {
+        "img1": "../assets/Projects/Eshop/img1-eshop.jpg",
+        "img2": "../assets/Projects/Eshop/img2-eshop.jpg",
+        "img3": "../assets/Projects/Eshop/img3-eshop.jpg",
+        "img4": "../assets/Projects/Eshop/img4-eshop.jpg"
+      }
+    },
+    {
+      "nameProject": "Supermark List",
+      "imagesProject": {
+        "img1": "../assets/Projects/SupermarList/img1-supermark.jpg",
+        "img2": "../assets/Projects/SupermarList/img3-supermark.jpg",
+        "img3": "../assets/Projects/SupermarList/img4-supermark.jpg"
+      }
+    },
+    {
+      "nameProject": "Rick and Morty",
+      "imagesProject": {
+        "img1": "../assets/Projects/Rick and morty/img1-rickandmorty.jpg",
+        "img2": "../assets/Projects/Rick and morty/img2-rickandmorty.jpg",
+        "img3": "../assets/Projects/Rick and morty/img3-rickandmorty.jpg"
+      }
+    },
+    {
+      "nameProject": "Sneakers commerce",
+      "imagesProject": {
+        "img1": "../assets/Projects/Eccomerce-product/img1-sneakers.jpg",
+        "img2": "../assets/Projects/Eccomerce-product/img2-sneakers.jpg"
+      }
+    }
+  ]
+}

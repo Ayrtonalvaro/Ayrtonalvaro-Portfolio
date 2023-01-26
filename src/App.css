@@ -1,0 +1,9 @@
+* {
+  font-family: 'Roboto Flex', sans-serif;
+}
+
+.typed-cursor.typed-cursor--blink {
+  
+  opacity: 0;
+  
+}

@@ -12,12 +12,30 @@ const Navbar = () => {
 
   const [open, setOpen] = useState(false)
 
+  const [navbarColor, setNavbarColor] = useState(false)
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbarColor(true)
+    } else {
+      setNavbarColor(false)
+    }
+  }
+
+  window.addEventListener('scroll', changeBackground)
+
   const handleOpen = () => {
     setOpen(!open)
   }
   return (
-    <div className="w-full fixed top-0 left-0">
-      <nav className="lg:flex items-center justify-around md:px-10 md:pt-10 px-7 bg-opacity-0 py-4">
+    <div
+      className={
+        navbarColor
+          ? 'w-full fixed top-0 left-0 bg-gradient-to-br from-black to-slate-900 z-50 '
+          : 'w-full fixed top-0 left-0'
+      }
+    >
+      <nav className="lg:flex items-center justify-around md:px-10 md:pt-10 px-7 bg-opacity-0 py-4 ">
         <div className="cursor-pointer flex items-center">
           <img
             className="w-12 rounded-full"
@@ -32,7 +50,7 @@ const Navbar = () => {
           </h4>
         </div>
         <div
-          className="text-3xl absolute right-8 top-6 cursor-pointer md:hidden"
+          className="text-3xl absolute right-8 top-6 cursor-pointer lg:hidden"
           onClick={handleOpen}
         >
           {open && <i className="fa-solid fa-x text-white"></i>}
@@ -40,9 +58,9 @@ const Navbar = () => {
         </div>
         <div>
           <ul
-            className={`md:flex md:items-center text-xl md:text-xl gap-5 md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-1 w-full md:w-auto bg-trasnparte pl-7 transition-all-duration-500 ease-in ${
+            className={`lg:flex lg:items-center text-xl lg:text-xl gap-5 md:pb-0 pb-12 absolute lg:static lg:z-auto z-[-1] left-1 w-full lg:w-auto bg-trasnparte pl-7 transition-all-duration-500 ease-in ${
               open
-                ? 'top-20 md:bg-opacity-0 bg-cyan-100 bg-opacity-5'
+                ? 'top-20 md:bg-opacity-0 bg-gradient-to-br from-black to-slate-900 '
                 : 'hidden'
             }`}
           >
