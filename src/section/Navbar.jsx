@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import fotoPerfil from '../assets/295081989_620446602988685_3033678942857903426_n.jpg'
+
 import { Link } from 'react-scroll'
+import Swtich from '../components/Swtich'
 
 const Navbar = () => {
   const links = [
@@ -31,7 +33,7 @@ const Navbar = () => {
     <div
       className={
         navbarColor
-          ? 'w-full fixed top-0 left-0 bg-gradient-to-br from-black to-slate-900 z-50 '
+          ? 'w-full fixed top-0 left-0 bg-gradient-to-br from-black to-slate-900 dark:bg-gradient-to-br dark:from-white dark:to-slate-500  z-50 '
           : 'w-full fixed top-0 left-0'
       }
     >
@@ -42,9 +44,9 @@ const Navbar = () => {
             src={fotoPerfil}
             alt="Foto de perfil de la barra de navegacion"
           />
-          <h4 className="text-5xl text-white">
+          <h4 className="text-5xl text-white dark:text-black ">
             Port
-            <span className="text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe ">
+            <span className="text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-br dark:from-black dark:to-slate-400 ">
               folio
             </span>
           </h4>
@@ -58,9 +60,9 @@ const Navbar = () => {
         </div>
         <div>
           <ul
-            className={`lg:flex lg:items-center text-xl lg:text-xl gap-5 md:pb-0 pb-12 absolute lg:static lg:z-auto z-[-1] left-1 w-full lg:w-auto bg-trasnparte pl-7 transition-all-duration-500 ease-in ${
+            className={`lg:flex lg:items-center text-xl lg:text-xl gap-5 md:pb-0 pb-12 absolute lg:static lg:z-auto z-[-1] left-1 xl:mt-0 mt-6 w-full lg:w-auto bg-trasnparte pl-7 transition-all-duration-500 ease-in ${
               open
-                ? 'top-20 md:bg-opacity-0 bg-gradient-to-br from-black to-slate-900 '
+                ? 'top-20 md:bg-opacity-0 bg-gradient-to-br from-black to-slate-900 dark:from-white dark:to-slate-500 '
                 : 'hidden'
             }`}
           >
@@ -75,12 +77,13 @@ const Navbar = () => {
                   offset={-10}
                   duration={600}
                 >
-                  <li className="hover:text-cyan-600 text-white duration-200  cursor-pointer lg:ml-8 lg:my-0 my-7">
+                  <li className="hover:text-cyan-600 text-white dark:text-cyan-800 dark:hover:text-black duration-200  cursor-pointer lg:ml-8 lg:my-0 my-7">
                     {link.name}
                   </li>
                 </Link>
               )
             })}
+            <Swtich />
           </ul>
         </div>
       </nav>

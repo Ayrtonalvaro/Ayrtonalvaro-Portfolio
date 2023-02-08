@@ -37,7 +37,9 @@ import {
   SiReact,
   SiTypescript,
   SiJavascript,
+  SiGithub,
 } from 'react-icons/si'
+import { MdOutlineOpenInNew } from 'react-icons/md'
 
 const show = {
   opacity: 1,
@@ -91,30 +93,32 @@ const Projects = () => {
   ]
 
   return (
-    <div className="px-40 mt-5" id="Projects">
+    <div className="px-40 mt-5" id="proyectos">
       <div className="flex items-center gap-10 justify-center">
-        <h2 className="text-6xl font-bold text-cyan-400">Proyectos</h2>
+        <h2 className="text-6xl font-bold text-cyan-400 dark:text-slate-900">
+          Proyectos
+        </h2>
 
         <motion.button
           whileTap={{ scale: 0.95 }}
           onClick={() => setIsVisible(!isVisible)}
         >
           {isVisible && (
-            <button className="text-2xl text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-purple-200 transition ease-in-out delay-100  hover:-translate-y-1 hover:scale-110 shadow-lg shadow-slate-500/50 rounded-md w-24">
+            <button className="text-2xl text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-purple-200 dark:from-cyan-800 dark:to-cyan-800 transition ease-in-out delay-100  hover:-translate-y-1 hover:scale-110 shadow-lg shadow-slate-500/50 dark:shadow-blue-100 rounded-md w-24">
               Ocultar
             </button>
           )}
           {!isVisible && (
-            <button className="text-2xl text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-purple-200 transition ease-in-out delay-100  hover:-translate-y-1 hover:scale-110 shadow-lg shadow-slate-500/50 rounded-md w-24">
+            <button className="text-2xl text-transparent bg-clip-text bg-gradient-to-br from-cyan-500 to-purple-200 dark:from-cyan-800 dark:to-cyan-800 transition ease-in-out delay-100  hover:-translate-y-1 hover:scale-110 shadow-lg shadow-slate-500/50 dark:shadow-blue-100 rounded-md w-24">
               Mostrar
             </button>
           )}
         </motion.button>
       </div>
-      <h4 className="text-white flex justify-center mt-10 text-xl">
+      <h4 className="text-white dark:text-black flex justify-center mt-10 text-xl">
         Tecnologias
       </h4>
-      <div className="flex justify-center gap-10 mt-5 text-slate-300 ">
+      <div className="flex justify-center gap-10 mt-5 text-slate-300 dark:text-slate-800">
         <SiReact className="text-5xl " />
         <SiJavascript className="text-5xl " />
         <SiTailwindcss className="text-5xl " />
@@ -129,11 +133,15 @@ const Projects = () => {
         >
           <div className="2xl:grid 2xl:grid-cols-2 mt-10 gap-10">
             <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <h1 className="text-4xl mb-5   text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe ">
-                Divi Films
-              </h1>
+              <div className="flex items-center justify-between">
+                <h1 className="text-4xl mb-5   text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe dark:from-black dark:to-cyan-900 cursor-pointer ">
+                  Divi Films
+                </h1>
+                <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
+              </div>
+
               <Swiper
-                className="grayscale cursor-pointer hover:grayscale-0 duration-500  2xl:skew-y-3  "
+                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500  2xl:skew-y-3  "
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
                 spaceBetween={50}
                 slidesPerView={1}
@@ -150,11 +158,15 @@ const Projects = () => {
               </Swiper>
             </div>
             <div className="cursor-pointer hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe">
-                Space tourism
-              </h1>
+              <div className="flex justify-between">
+                <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
+                  Space tourism
+                </h1>
+                <SiGithub className=" text-4xl cursor-pointer text-white hover:text-cyan-400 dark:text-slate-900 dark:hover:text-slate-100 hover:duration-600" />
+              </div>
+
               <Swiper
-                className="grayscale  hover:grayscale-0 duration-500 2xl:-skew-y-3 "
+                className="grayscale dark:grayscale-0  hover:grayscale-0 duration-500 2xl:-skew-y-3 "
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
                 spaceBetween={50}
                 slidesPerView={1}
@@ -171,11 +183,15 @@ const Projects = () => {
               </Swiper>
             </div>
             <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe">
-                E-Shop
-              </h1>
+              <div className="flex justify-between">
+                <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
+                  E-Shop
+                </h1>
+                <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
+              </div>
+
               <Swiper
-                className="grayscale cursor-pointer hover:grayscale-0 duration-500  "
+                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500  "
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
                 spaceBetween={50}
                 slidesPerView={1}
@@ -192,11 +208,34 @@ const Projects = () => {
               </Swiper>
             </div>
             <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <h1 className="text-4xl mb-5  text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe">
-                Supermark list
-              </h1>
+              <div className="flex justify-between">
+                <h1 className="text-4xl mb-5  text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
+                  Supermark list
+                </h1>
+                <ul className="flex gap-5">
+                  <li>
+                    <a
+                      href="https://github.com/Ayrtonalvaro/SupermarketList.github.io"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://supermark-list.firebaseapp.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <MdOutlineOpenInNew className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
               <Swiper
-                className="grayscale cursor-pointer hover:grayscale-0 duration-500 2xl:-skew-y-3 "
+                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500 2xl:-skew-y-3 "
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
                 spaceBetween={50}
                 slidesPerView={1}
@@ -213,11 +252,15 @@ const Projects = () => {
               </Swiper>
             </div>
             <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe">
-                Rick and morty
-              </h1>
+              <div className="flex justify-between">
+                <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
+                  Rick and morty
+                </h1>
+                <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
+              </div>
+
               <Swiper
-                className="grayscale cursor-pointer hover:grayscale-0 duration-500 2xl:-skew-y-3 "
+                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500 2xl:-skew-y-3 "
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
                 spaceBetween={50}
                 slidesPerView={1}
@@ -234,11 +277,18 @@ const Projects = () => {
               </Swiper>
             </div>
             <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe">
-                Snkears eccomerce
-              </h1>
+              <div className="flex justify-between">
+                <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
+                  Snkears eccomerce
+                </h1>
+                <ul>
+                  <li></li>
+                </ul>
+                <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
+              </div>
+
               <Swiper
-                className="grayscale cursor-pointer hover:grayscale-0 duration-500 "
+                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500 "
                 modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
                 spaceBetween={50}
                 slidesPerView={1}

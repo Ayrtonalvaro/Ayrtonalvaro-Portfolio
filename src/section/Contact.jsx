@@ -8,10 +8,10 @@ const Contact = () => {
           <div className="mb-6 md:mb-0"></div>
           <div className="grid grid-cols-1 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-slate-300 uppercase dark:text-cyan-700">
                 Recursos
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
+              <ul className="text-gray-600 dark:text-gray-900">
                 <li className="mb-4">
                   <a
                     href="https://es.reactjs.org/"
@@ -35,10 +35,10 @@ const Contact = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold uppercase text-slate-300 dark:text-cyan-700">
                 Seguime
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
+              <ul className="text-gray-600 dark:text-gray-800">
                 <li className="mb-4">
                   <a
                     href="https://github.com/Ayrtonalvaro"
@@ -62,10 +62,10 @@ const Contact = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-semibold text-slate-300 uppercase  dark:text-cyan-700">
                 Gmail
               </h2>
-              <ul className="text-gray-600 dark:text-gray-400">
+              <ul className="text-gray-600 dark:text-gray-800">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
                     Ayrtonalvaro1973@gmail.com
@@ -77,13 +77,13 @@ const Contact = () => {
         </div>
         <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-800">
             © 2023 <a className="hover:underline">AyrtonAlvaro</a>
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a
               href="https://www.instagram.com/ayrtonalvaro/?hl=es-la"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500 dark:text-gray-700 hover:text-gray-900 dark:hover:text-white"
               target="_blank"
               rel="noreferrer"
             >
@@ -103,7 +103,7 @@ const Contact = () => {
             </a>
             <a
               href="https://twitter.com/ayrtonalvaro"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500 dark:text-gray-700 hover:text-gray-900 dark:hover:text-white"
               target="_blank"
               rel="noreferrer"
             >
@@ -119,7 +119,7 @@ const Contact = () => {
             </a>
             <a
               href="https://github.com/Ayrtonalvaro"
-              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+              className="text-gray-500 dark:text-gray-700 hover:text-gray-900 dark:hover:text-white"
               target="_blank"
               rel="noreferrer"
             >
