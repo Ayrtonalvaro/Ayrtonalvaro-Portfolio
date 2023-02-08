@@ -162,7 +162,16 @@ const Projects = () => {
                 <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
                   Space tourism
                 </h1>
-                <SiGithub className=" text-4xl cursor-pointer text-white hover:text-cyan-400 dark:text-slate-900 dark:hover:text-slate-100 hover:duration-600" />
+                <div className='flex gap-5'>
+                  <SiGithub className=" text-4xl cursor-pointer text-white hover:text-cyan-400 dark:text-slate-900 dark:hover:text-slate-100 hover:duration-600" />
+                  <a
+                    href="https://space-turism-b5b84.firebaseapp.com/Destination"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <MdOutlineOpenInNew className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
+                  </a>
+                </div>
               </div>
 
               <Swiper

@@ -6,10 +6,9 @@ import Swtich from '../components/Swtich'
 
 const Navbar = () => {
   const links = [
-    { name: 'Inicio', to: '/' },
-    { name: 'Sobre mí', to: '/sombremi' },
-    { name: 'Proyectos', to: '/proyectos' },
-    { name: 'Contactos', to: '/contactos' },
+    { name: 'Sobre mí', to: 'sombremi' },
+    { name: 'Proyectos', to: 'proyectos' },
+    { name: 'Contactos', to: 'contactos' },
   ]
 
   const [open, setOpen] = useState(false)

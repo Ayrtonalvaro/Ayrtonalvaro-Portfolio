@@ -2,7 +2,7 @@ import React from 'react'
 
 const Contact = () => {
   return (
-    <div>
+    <div id="contactos">
       <footer className="p-4 mt-10  sm:p-6" id="Contact">
         <div className="md:flex md:justify-center mt-5">
           <div className="mb-6 md:mb-0"></div>
