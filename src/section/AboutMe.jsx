@@ -12,7 +12,7 @@ const AboutMe = () => {
     <div className=" md:pt-48 pt-96" id="sombremi">
       <div className=" text-start  ">
         <h4 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe dark:from-black dark:to-cyan-800 mb-8">
-          Bienvenido a mi porfolio
+          Bienvenido a mi portfolio
         </h4>
         <h1 className="text-7xl font-black mt-2 text-white dark:text-slate-900">
           Mi nombre es
