@@ -23,8 +23,6 @@ import img1SupermarkList from '../assets/Projects/SupermarList/img1-supermark.jp
 import img3SupermarkList from '../assets/Projects/SupermarList/img3-supermark.jpg'
 import img4SupermarkList from '../assets/Projects/SupermarList/img4-supermark.jpg'
 
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, Scrollbar, A11y, EffectFade } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -37,9 +35,8 @@ import {
   SiReact,
   SiTypescript,
   SiJavascript,
-  SiGithub,
 } from 'react-icons/si'
-import { MdOutlineOpenInNew } from 'react-icons/md'
+import ProjectCard from '../components/ProjectCard'
 
 const show = {
   opacity: 1,
@@ -122,7 +119,6 @@ const Projects = () => {
         <SiReact className="text-5xl " />
         <SiJavascript className="text-5xl " />
         <SiTailwindcss className="text-5xl " />
-
         <SiTypescript className="text-5xl " />
       </div>
       <motion.div animate={isVisible ? show : hide}>
@@ -132,196 +128,47 @@ const Projects = () => {
           viewport={{ once: true }}
         >
           <div className="2xl:grid 2xl:grid-cols-2 mt-10 gap-10">
-            <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <div className="flex items-center justify-between">
-                <h1 className="text-4xl mb-5   text-transparent bg-clip-text bg-gradient-to-br from-slate-200 to-withe dark:from-black dark:to-cyan-900 cursor-pointer ">
-                  Divi Films
-                </h1>
-                <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
-              </div>
+            <ProjectCard
+              titleProject="Divi Films"
+              linkGitHub=""
+              linkDeploy=""
+              imagesProject={imagenesDiviFilms}
+            />
 
-              <Swiper
-                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500  2xl:skew-y-3  "
-                modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                effect="fade"
-              >
-                {imagenesDiviFilms.map(imagen => {
-                  return (
-                    <SwiperSlide key={imagen.id}>
-                      <img src={imagen.src} />
-                    </SwiperSlide>
-                  )
-                })}
-              </Swiper>
-            </div>
-            <div className="cursor-pointer hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <div className="flex justify-between">
-                <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
-                  Space tourism
-                </h1>
-                <div className="flex gap-5">
-                  <SiGithub className=" text-4xl cursor-pointer text-white hover:text-cyan-400 dark:text-slate-900 dark:hover:text-slate-100 hover:duration-600" />
-                  <a
-                    href="https://space-turism-b5b84.firebaseapp.com/Destination"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <MdOutlineOpenInNew className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
-                  </a>
-                </div>
-              </div>
+            <ProjectCard
+              titleProject="Space tourism"
+              linkGitHub="https://github.com/Ayrtonalvaro/Space-world"
+              linkDeploy="https://space-turism-b5b84.firebaseapp.com/Destination"
+              imagesProject={imagenesSpacetourism}
+            />
 
-              <Swiper
-                className="grayscale dark:grayscale-0  hover:grayscale-0 duration-500 2xl:-skew-y-3 "
-                modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                effect="fade"
-              >
-                {imagenesSpacetourism.map(imagen => {
-                  return (
-                    <SwiperSlide key={imagen.id}>
-                      <img src={imagen.src} />
-                    </SwiperSlide>
-                  )
-                })}
-              </Swiper>
-            </div>
-            <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <div className="flex justify-between">
-                <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
-                  E-Shop
-                </h1>
-                <div className='flex gap-5'>
-                  <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
-                  <a
-                    href="https://aytonalvaro-portfolio.firebaseapp.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <MdOutlineOpenInNew className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
-                  </a>
-                </div>
-              </div>
+            <ProjectCard
+              titleProject="E-Shop"
+              linkGitHub="https://github.com/Ayrtonalvaro/Coder-ecommerce"
+              linkDeploy="https://backende-shop.firebaseapp.com/"
+              imagesProject={imagenesEccomerece}
+            />
 
-              <Swiper
-                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500  "
-                modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                effect="fade"
-              >
-                {imagenesEccomerece.map(imagen => {
-                  return (
-                    <SwiperSlide key={imagen.id}>
-                      <img src={imagen.src} />
-                    </SwiperSlide>
-                  )
-                })}
-              </Swiper>
-            </div>
-            <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <div className="flex justify-between">
-                <h1 className="text-4xl mb-5  text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
-                  Supermark list
-                </h1>
-                <ul className="flex gap-5">
-                  <li>
-                    <a
-                      href="https://github.com/Ayrtonalvaro/SupermarketList.github.io"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://supermark-list.firebaseapp.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      <MdOutlineOpenInNew className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
+            <ProjectCard
+              titleProject="Supermark list"
+              linkGitHub="https://github.com/Ayrtonalvaro/SupermarketList.github.io"
+              linkDeploy="https://supermark-list.firebaseapp.com/"
+              imagesProject={imagenesSupermarklist}
+            />
 
-              <Swiper
-                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500 2xl:-skew-y-3 "
-                modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                effect="fade"
-              >
-                {imagenesSupermarklist.map(imagen => {
-                  return (
-                    <SwiperSlide key={imagen.id}>
-                      <img src={imagen.src} />
-                    </SwiperSlide>
-                  )
-                })}
-              </Swiper>
-            </div>
-            <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <div className="flex justify-between">
-                <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
-                  Rick and morty
-                </h1>
-                <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
-              </div>
+            <ProjectCard
+              titleProject="Rick and morty"
+              linkGitHub=""
+              linkDeploy=""
+              imagesProject={imagenesRickAndMorty}
+            />
 
-              <Swiper
-                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500 2xl:-skew-y-3 "
-                modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                effect="fade"
-              >
-                {imagenesRickAndMorty.map(imagen => {
-                  return (
-                    <SwiperSlide key={imagen.id}>
-                      <img src={imagen.src} />
-                    </SwiperSlide>
-                  )
-                })}
-              </Swiper>
-            </div>
-            <div className="hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-br hover:from-cyan-500 hover:to-slate-50">
-              <div className="flex justify-between">
-                <h1 className="text-4xl mb-5 text-transparent bg-clip-text bg-gradient-to-br from-slate-200 dark:from-black dark:to-cyan-900 to-withe">
-                  Snkears eccomerce
-                </h1>
-                <ul>
-                  <li></li>
-                </ul>
-                <SiGithub className=" text-4xl cursor-pointer text-white dark:text-slate-900 dark:hover:text-slate-100 hover:text-cyan-400 hover:duration-600" />
-              </div>
-
-              <Swiper
-                className="grayscale dark:grayscale-0 cursor-pointer hover:grayscale-0 duration-500 "
-                modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                effect="fade"
-              >
-                {imagenesEccomerceSneakers.map(imagen => {
-                  return (
-                    <SwiperSlide key={imagen.id}>
-                      <img src={imagen.src} />
-                    </SwiperSlide>
-                  )
-                })}
-              </Swiper>
-            </div>
+            <ProjectCard
+              titleProject="Snkears eccomerce"
+              linkGitHub=""
+              linkDeploy=""
+              imagesProject={imagenesEccomerceSneakers}
+            />
           </div>
         </motion.div>
       </motion.div>

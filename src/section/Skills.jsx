@@ -10,6 +10,7 @@ import spring from '../assets/spring.png'
 import taildwindcss from '../assets/tailwindd.png'
 import ts from '../assets/ts.png'
 import { motion } from 'framer-motion'
+import SkillIcon from '../components/SkillIcon'
 
 const Skills = () => {
   return (
@@ -22,81 +23,46 @@ const Skills = () => {
             animate={{ x: 270 }}
             transition={{ ease: 'easeOut', duration: 3 }}
           >
-            <div className="hover:animate-bounce cursor-pointer  duration-300 ">
-              <a
-                href="https://tailwindcss.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <img
-                  className="w-20  mt-5 object-contain "
-                  src={taildwindcss}
-                />
-              </a>
-            </div>
+            <SkillIcon
+              linkSkill="https://tailwindcss.com/"
+              srcSkill={taildwindcss}
+            />
           </motion.div>
         </div>
 
         <motion.div
-          className="flex gap-10 pt-8"
+          className="flex gap-10 pt-8 items-center"
           animate={{ x: 150 }}
           transition={{ ease: 'easeOut', duration: 3 }}
         >
-          <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">
-            <img
-              className="w-20 bg-opacity-0 hover:animate-bounce cursor-pointer "
-              src={bootstrap}
-            />
-          </a>
-          <a
-            href="https://developer.mozilla.org/es/docs/Web/CSS"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="w-20 bg-opacity-0 hover:animate-bounce cursor-pointer "
-              src={css}
-            />
-          </a>
-          <a
-            href="https://www.typescriptlang.org/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="w-20 bg-opacity-0 hover:animate-bounce cursor-pointer "
-              src={ts}
-            />
-          </a>
+          <SkillIcon
+            linkSkill="https://getbootstrap.com/"
+            srcSkill={bootstrap}
+          />
+
+          <SkillIcon
+            linkSkill="https://developer.mozilla.org/es/docs/Web/CSS"
+            srcSkill={css}
+          />
+
+          <SkillIcon
+            linkSkill="https://www.typescriptlang.org/"
+            srcSkill={ts}
+          />
         </motion.div>
 
         <motion.div
-          className=" flex gap-10 pt-8"
+          className=" flex gap-10 pt-8 items-center"
           animate={{ x: 150 }}
           transition={{ ease: 'easeOut', duration: 3 }}
         >
-          <a href="https://www.java.com/es/" target="_blank" rel="noreferrer">
-            <img
-              className="w-20 bg-opacity-0 hover:animate-bounce cursor-pointer "
-              src={java}
-            />
-          </a>
-          <a
-            href="https://developer.mozilla.org/es/docs/Web/JavaScript"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <img
-              className="w-20 bg-opacity-0 hover:animate-bounce cursor-pointer "
-              src={javascript}
-            />
-          </a>
-          <a href="https://es.reactjs.org/" target="_blank" rel="noreferrer">
-            <img
-              className="w-20 bg-opacity-0 hover:animate-bounce cursor-pointer "
-              src={react}
-            />
-          </a>
+          <SkillIcon linkSkill="https://www.java.com/es/" srcSkill={java} />
+          <SkillIcon
+            linkSkill="https://developer.mozilla.org/es/docs/Web/JavaScript"
+            srcSkill={javascript}
+          />
+
+          <SkillIcon linkSkill="https://es.reactjs.org/" srcSkill={react} />
         </motion.div>
 
         <motion.div
@@ -104,12 +70,7 @@ const Skills = () => {
           animate={{ x: 270 }}
           transition={{ ease: 'easeOut', duration: 3 }}
         >
-          <a href="https://spring.io/" target="_blank" rel="noreferrer">
-            <img
-              className="w-20  hover:animate-bounce cursor-pointer"
-              src={spring}
-            />
-          </a>
+          <SkillIcon linkSkill="https://spring.io/" srcSkill={spring} />
         </motion.div>
       </div>
     </div>

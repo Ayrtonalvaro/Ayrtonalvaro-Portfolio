@@ -15,5 +15,6 @@ module.exports = {
     'space-before-function-paren': 'off',
     'comma-dangle': 'off',
     'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/prop-types': ['off'],
   },
 }
